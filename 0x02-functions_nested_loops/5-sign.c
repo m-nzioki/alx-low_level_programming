@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- *
  * print_sign - prints the sign of a number
  * @n: number whose sign it determines
  *
@@ -13,6 +12,7 @@
 int print_sign(int n)
 {
 	int x;
+
 	x = n;
 
 	if (x > 0)
