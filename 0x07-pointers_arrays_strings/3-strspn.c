@@ -2,7 +2,7 @@
 
 /**
  * _strspn - calculates the length of a prefix substring
- * and returns only the number of bytes 
+ * and returns only the number of bytes
  * @s:substring
  * @accept: string of comparison
  *
@@ -13,7 +13,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int i = 0;
 	int j;
 
-	for (;*s != '\0'; s++)
+	for (; *s != '\0'; s++)
 	{
 		for (j = 0; accept[j]; j++)
 		{
@@ -25,4 +25,3 @@ unsigned int _strspn(char *s, char *accept)
 	}
 	return (i);
 }
-			

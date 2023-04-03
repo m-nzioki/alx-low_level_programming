@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - does exactly that
- * @a:pointer to row 
+ * @a: pointer to row
  */
 
 void print_chessboard(char (*a)[8])
