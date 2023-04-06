@@ -6,38 +6,14 @@
  *
  */
 
-int count = 0;
-int i; 
-
-int length(char *t)
-{
-	int x = 0;
-
-	if (t[x] == '\0')
-	{
-		return (x);
-	}
-
-	x++;
-	t++;
-	length(t - 1);
-	printf("Length: %d, \n", x);
-	return (x);
-}
-
 void _print_rev_recursion(char *s)
 {
-	i = length(s) - count;
 
-	if (i <= 0)
+	if (*s == '\0')
 	{
-		_putchar('\n');
 		return;
 	}
 
-	_putchar(s[i]);
-	count++; 
-
-	_print_rev_recursion(s);
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 }
-
