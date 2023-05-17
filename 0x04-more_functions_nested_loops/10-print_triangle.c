@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * print_triangle - prints a triangle using the '#' character
@@ -9,27 +8,27 @@
 
 void print_triangle(int size)
 {
-	int h; 
-	int i;
-	int j;
-
-	int k = size;
-
-	if (k > 0)
+	if (size <= 0)
 	{
-		for (i = 0; i < k; i++)
+		_putchar('\n');
+	}
+	else
+	{
+		int i, j, k;
+		
+		for (i = 1; i <= size; i++)
 		{
-			for (j = (k - 1); j > i; j--)
-			{
-				_putchar('.');
-				
-				for (h = 0; h < (k - j); h++)
-				{
-					_putchar('#');
-				}
+			for (j = i; j < size; j++)
+			{	
+				_putchar(' ');
 			}
-	
+			for (k = 1; k <= i; k++)
+			{
+				_putchar('#');
+			}
 			_putchar('\n');
 		}
 	}
 }
+	
+
