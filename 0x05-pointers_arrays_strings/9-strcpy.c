@@ -7,19 +7,22 @@
  * @src: string pointer
  *
  * Return: pointer to dest
- *
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	while (*src != '\0')
+	int j;
+	int i = 0;
+
+	while (src[i] != '\0')
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		i++;
 	}
 
-	*dest = '\0';
+	for (j = 0; j < i; j++)
+		dest[j] = src[j];
+
+	dest[j] = '\0';
 
 	return (dest);
 }

@@ -1,18 +1,20 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * puts2 - prints every other character of a string
- *@str: pointer to string
+ * @str: pointer to string
  */
 
 void puts2(char *str)
 {
-	char *t;
+	int i = 0;
 
-	for (t = str; *t != '\0'; t = t + 2)
+	for (i = 0; str[i] != 0; i++)
 	{
-		_putchar(*t);
+		if ((i % 2) == 0)
+		{
+			_putchar(*str);
+		}
 	}
 	_putchar('\n');
 }

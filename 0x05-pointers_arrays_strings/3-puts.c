@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
  * _puts - prints a string
@@ -8,11 +7,9 @@
 
 void _puts(char *str)
 {
-	char *t;
-
-	for (t = str; *t != '\0'; t++)
+	for (; *str != '\0'; str++)
 	{
-		_putchar(*t);
+		_putchar(*str);
 	}
 	_putchar('\n');
 }
