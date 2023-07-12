@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * alloc_buffer - allocates 1024 bytes for a buffer
@@ -62,7 +63,6 @@ int main(int argc, char *argv[])
 	}
 
 	buff = alloc_buffer(argv[2]);
-
 	o_from = open(argv[1], O_RDONLY);
 	r = read(o_from, buff, 1024);
 
