@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
 	buff = alloc_buffer(argv[2]);
 
-	o_from = open(argv[1], O_RONLY);
+	o_from = open(argv[1], O_RDONLY);
 	r = read(o_from, buff, 1024);
 
 	do {
