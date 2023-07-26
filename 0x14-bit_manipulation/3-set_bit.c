@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * get_bit - gets the value of a bit at a given index
+ * set_bit -  sets the value of a bit to 1 at a given index
  * @n: the number
  * @index: the index
- * Return: value of the bit at index or -1 if unsuccessful
+ * Return: 1 on success, else -1
  */
 
-int get_bit(unsigned long int n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int x, mask, bits = 0;
 
@@ -24,8 +24,7 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	mask = 1UL << index;
 
-	if ((n & mask)  != 0)
-		return (1);
-	else
-		return (0);
+	*n |= mask;
+
+	return (1);
 }
